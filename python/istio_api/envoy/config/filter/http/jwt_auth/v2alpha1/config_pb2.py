@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='envoy/config/filter/http/jwt_auth/v2alpha1/config.proto',
   package='istio.envoy.config.filter.http.jwt_auth.v2alpha1',
   syntax='proto3',
-  serialized_pb=_b('\n7envoy/config/filter/http/jwt_auth/v2alpha1/config.proto\x12\x30istio.envoy.config.filter.http.jwt_auth.v2alpha1\x1a\x1egoogle/protobuf/duration.proto\"k\n\x07HttpUri\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x11\n\x07\x63luster\x18\x02 \x01(\tH\x00\x12*\n\x07timeout\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationB\x14\n\x12http_upstream_type\"^\n\nDataSource\x12\x12\n\x08\x66ilename\x18\x01 \x01(\tH\x00\x12\x16\n\x0cinline_bytes\x18\x02 \x01(\x0cH\x00\x12\x17\n\rinline_string\x18\x03 \x01(\tH\x00\x42\x0b\n\tspecifier\"\x87\x03\n\x07JwtRule\x12\x0e\n\x06issuer\x18\x01 \x01(\t\x12\x11\n\taudiences\x18\x02 \x03(\t\x12S\n\x0bremote_jwks\x18\x03 \x01(\x0b\x32<.istio.envoy.config.filter.http.jwt_auth.v2alpha1.RemoteJwksH\x00\x12R\n\nlocal_jwks\x18\x04 \x01(\x0b\x32<.istio.envoy.config.filter.http.jwt_auth.v2alpha1.DataSourceH\x00\x12\x0f\n\x07\x66orward\x18\x05 \x01(\x08\x12Q\n\x0c\x66rom_headers\x18\x06 \x03(\x0b\x32;.istio.envoy.config.filter.http.jwt_auth.v2alpha1.JwtHeader\x12\x13\n\x0b\x66rom_params\x18\x07 \x03(\t\x12\x1e\n\x16\x66orward_payload_header\x18\x08 \x01(\tB\x17\n\x15jwks_source_specifier\"\x8c\x01\n\nRemoteJwks\x12K\n\x08http_uri\x18\x01 \x01(\x0b\x32\x39.istio.envoy.config.filter.http.jwt_auth.v2alpha1.HttpUri\x12\x31\n\x0e\x63\x61\x63he_duration\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\"/\n\tJwtHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cvalue_prefix\x18\x02 \x01(\t\"~\n\x11JwtAuthentication\x12H\n\x05rules\x18\x01 \x03(\x0b\x32\x39.istio.envoy.config.filter.http.jwt_auth.v2alpha1.JwtRule\x12\x1f\n\x17\x61llow_missing_or_failed\x18\x02 \x01(\x08\x42\x39Z7istio.io/api/envoy/config/filter/http/jwt_auth/v2alpha1b\x06proto3')
+  serialized_pb=_b('\n7envoy/config/filter/http/jwt_auth/v2alpha1/config.proto\x12\x30istio.envoy.config.filter.http.jwt_auth.v2alpha1\x1a\x1egoogle/protobuf/duration.proto\"k\n\x07HttpUri\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x11\n\x07\x63luster\x18\x02 \x01(\tH\x00\x12*\n\x07timeout\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationB\x14\n\x12http_upstream_type\"^\n\nDataSource\x12\x12\n\x08\x66ilename\x18\x01 \x01(\tH\x00\x12\x16\n\x0cinline_bytes\x18\x02 \x01(\x0cH\x00\x12\x17\n\rinline_string\x18\x03 \x01(\tH\x00\x42\x0b\n\tspecifier\"\x87\x03\n\x07JwtRule\x12\x0e\n\x06issuer\x18\x01 \x01(\t\x12\x11\n\taudiences\x18\x02 \x03(\t\x12S\n\x0bremote_jwks\x18\x03 \x01(\x0b\x32<.istio.envoy.config.filter.http.jwt_auth.v2alpha1.RemoteJwksH\x00\x12R\n\nlocal_jwks\x18\x04 \x01(\x0b\x32<.istio.envoy.config.filter.http.jwt_auth.v2alpha1.DataSourceH\x00\x12\x0f\n\x07\x66orward\x18\x05 \x01(\x08\x12Q\n\x0c\x66rom_headers\x18\x06 \x03(\x0b\x32;.istio.envoy.config.filter.http.jwt_auth.v2alpha1.JwtHeader\x12\x13\n\x0b\x66rom_params\x18\x07 \x03(\t\x12\x1e\n\x16\x66orward_payload_header\x18\x08 \x01(\tB\x17\n\x15jwks_source_specifier\"\x8c\x01\n\nRemoteJwks\x12K\n\x08http_uri\x18\x01 \x01(\x0b\x32\x39.istio.envoy.config.filter.http.jwt_auth.v2alpha1.HttpUri\x12\x31\n\x0e\x63\x61\x63he_duration\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\"/\n\tJwtHeader\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cvalue_prefix\x18\x02 \x01(\t\"\xd5\x01\n\x11JwtAuthentication\x12H\n\x05rules\x18\x01 \x03(\x0b\x32\x39.istio.envoy.config.filter.http.jwt_auth.v2alpha1.JwtRule\x12\x1f\n\x17\x61llow_missing_or_failed\x18\x02 \x01(\x08\x12U\n\x12\x64ist_uri_whitelist\x18\x03 \x03(\x0b\x32\x39.istio.envoy.config.filter.http.jwt_auth.v2alpha1.HttpUriB9Z7istio.io/api/envoy/config/filter/http/jwt_auth/v2alpha1b\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,])
 
@@ -303,6 +303,13 @@ _JWTAUTHENTICATION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dist_uri_whitelist', full_name='istio.envoy.config.filter.http.jwt_auth.v2alpha1.JwtAuthentication.dist_uri_whitelist', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -315,8 +322,8 @@ _JWTAUTHENTICATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=932,
-  serialized_end=1058,
+  serialized_start=933,
+  serialized_end=1146,
 )
 
 _HTTPURI.fields_by_name['timeout'].message_type = google_dot_protobuf_dot_duration__pb2._DURATION
@@ -344,6 +351,7 @@ _JWTRULE.fields_by_name['local_jwks'].containing_oneof = _JWTRULE.oneofs_by_name
 _REMOTEJWKS.fields_by_name['http_uri'].message_type = _HTTPURI
 _REMOTEJWKS.fields_by_name['cache_duration'].message_type = google_dot_protobuf_dot_duration__pb2._DURATION
 _JWTAUTHENTICATION.fields_by_name['rules'].message_type = _JWTRULE
+_JWTAUTHENTICATION.fields_by_name['dist_uri_whitelist'].message_type = _HTTPURI
 DESCRIPTOR.message_types_by_name['HttpUri'] = _HTTPURI
 DESCRIPTOR.message_types_by_name['DataSource'] = _DATASOURCE
 DESCRIPTOR.message_types_by_name['JwtRule'] = _JWTRULE
