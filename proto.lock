@@ -238,6 +238,243 @@
       }
     },
     {
+      "protopath": "authentication:/:v1alpha2:/:policy.proto",
+      "def": {
+        "enums": [
+          {
+            "name": "MutualTls.Mode",
+            "enum_fields": [
+              {
+                "name": "STRICT",
+                "integer": 0
+              },
+              {
+                "name": "PERMISSIVE",
+                "integer": 1
+              }
+            ]
+          },
+          {
+            "name": "PrincipalBinding",
+            "enum_fields": [
+              {
+                "name": "USE_PEER",
+                "integer": 0
+              },
+              {
+                "name": "USE_ORIGIN",
+                "integer": 1
+              }
+            ]
+          }
+        ],
+        "messages": [
+          {
+            "name": "StringMatch",
+            "fields": [
+              {
+                "id": 1,
+                "name": "exact",
+                "type": "string"
+              },
+              {
+                "id": 2,
+                "name": "prefix",
+                "type": "string"
+              },
+              {
+                "id": 3,
+                "name": "suffix",
+                "type": "string"
+              },
+              {
+                "id": 4,
+                "name": "regex",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "MutualTls",
+            "fields": [
+              {
+                "id": 1,
+                "name": "allow_tls",
+                "type": "bool"
+              },
+              {
+                "id": 2,
+                "name": "mode",
+                "type": "Mode"
+              }
+            ]
+          },
+          {
+            "name": "Jwt",
+            "fields": [
+              {
+                "id": 1,
+                "name": "issuer",
+                "type": "string"
+              },
+              {
+                "id": 2,
+                "name": "audiences",
+                "type": "string",
+                "is_repeated": true
+              },
+              {
+                "id": 3,
+                "name": "jwks_uri",
+                "type": "string"
+              },
+              {
+                "id": 6,
+                "name": "jwt_headers",
+                "type": "string",
+                "is_repeated": true
+              },
+              {
+                "id": 7,
+                "name": "jwt_params",
+                "type": "string",
+                "is_repeated": true
+              },
+              {
+                "id": 9,
+                "name": "trigger_rules",
+                "type": "TriggerRule",
+                "is_repeated": true
+              }
+            ],
+            "messages": [
+              {
+                "name": "TriggerRule",
+                "fields": [
+                  {
+                    "id": 1,
+                    "name": "excluded_paths",
+                    "type": "StringMatch",
+                    "is_repeated": true
+                  },
+                  {
+                    "id": 2,
+                    "name": "included_paths",
+                    "type": "StringMatch",
+                    "is_repeated": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "PeerAuthenticationMethod",
+            "fields": [
+              {
+                "id": 1,
+                "name": "mtls",
+                "type": "MutualTls"
+              },
+              {
+                "id": 2,
+                "name": "jwt",
+                "type": "Jwt"
+              }
+            ]
+          },
+          {
+            "name": "OriginAuthenticationMethod",
+            "fields": [
+              {
+                "id": 1,
+                "name": "jwt",
+                "type": "Jwt"
+              }
+            ]
+          },
+          {
+            "name": "Policy",
+            "fields": [
+              {
+                "id": 1,
+                "name": "targets",
+                "type": "TargetSelector",
+                "is_repeated": true
+              },
+              {
+                "id": 2,
+                "name": "peers",
+                "type": "PeerAuthenticationMethod",
+                "is_repeated": true
+              },
+              {
+                "id": 3,
+                "name": "peer_is_optional",
+                "type": "bool"
+              },
+              {
+                "id": 4,
+                "name": "origins",
+                "type": "OriginAuthenticationMethod",
+                "is_repeated": true
+              },
+              {
+                "id": 5,
+                "name": "origin_is_optional",
+                "type": "bool"
+              },
+              {
+                "id": 6,
+                "name": "principal_binding",
+                "type": "PrincipalBinding"
+              }
+            ]
+          },
+          {
+            "name": "TargetSelector",
+            "fields": [
+              {
+                "id": 1,
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "id": 2,
+                "name": "ports",
+                "type": "PortSelector",
+                "is_repeated": true
+              }
+            ],
+            "maps": [
+              {
+                "key_type": "string",
+                "field": {
+                  "id": 3,
+                  "name": "labels",
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PortSelector",
+            "fields": [
+              {
+                "id": 1,
+                "name": "number",
+                "type": "uint32"
+              },
+              {
+                "id": 2,
+                "name": "name",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "protopath": "envoy:/:config:/:filter:/:http:/:authn:/:v2alpha1:/:config.proto",
       "def": {
         "messages": [
